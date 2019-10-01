@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Singleton_1 = require("./Singleton");
+var test_1 = require("./test");
+var tracker = Singleton_1.StatsTracker.instance;
+tracker.buttonClick = 98;
+tracker.facebooksShares = 100;
+tracker.twittersShares = 50;
+tracker.widgetViews = 25;
+console.log("Buttons click", tracker.buttonClick);
+console.log("Facebooks shares", tracker.facebooksShares);
+console.log("Twitters shares", tracker.twittersShares);
+console.log("Widget views", tracker.widgetViews);
+tracker.facebooksShares++;
+tracker.widgetViews += 10;
+test_1.test();

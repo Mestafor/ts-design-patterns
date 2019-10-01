@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var PostService_1 = require("./PostService");
+var JsonExportSerice_1 = require("./JsonExportSerice");
+var MockPostsService_1 = require("./MockPostsService");
+// import { NewsFeed } from './NewsFeed';
+var postService = new PostService_1.PostService();
+postService.export(new JsonExportSerice_1.JsonExportSerice()).then(console.log);
+var mockService = new MockPostsService_1.MockPostsService();
+mockService.export(new JsonExportSerice_1.JsonExportSerice()).then(console.log);
